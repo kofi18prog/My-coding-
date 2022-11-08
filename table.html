@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+        table.table{
+            margin: 26px;
+            background-color: lightblue;
+        }
+      table,table,
+      table.table td,table.table th {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 16px;
+        font-size:22px;
+      }
+      .lunch{
+        text-align: center;
+      }
+      table.table1 th,table.table1 td{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+        font-size: 20px;
+        text-align: left;
+      }
+      table.table1{
+        width: 600px;
+      }
+      table.table1 th{
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table">
+        <caption style="font-weight:22px;">My Secret Time-Table</caption>
+      <tr>
+        <td class="lunch" rowspan="6">Hours</td>
+        <th scope="col">Mon</th>       
+         <th scope="row">Tue</th>
+         <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Art</td>
+        <td>English Lit</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <td>Art</td>
+        <td>English</td>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <td colspan="5" 
+         class="lunch">Lunch Break</tr>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Art</td>
+        <td>English Lit</td>
+        <td>Sports</td>
+      </tr>
+      <tr>
+        <td>Art</td>
+        <td>English</td>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>Sports</td>
+      </tr>
+    </table>
+    <table class="table1">
+      <tr>
+        <th colspan="3">Invoice#12345ABC</th>
+        <th>18 Jul 2022</th>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <b>Pay To:</b>
+          <br>The Tech Park
+        <br> 123 Willow Street <br>
+          Boulevard, LA-567892
+        </td>
+        <td colspan="2">
+          <b>Customer:</b>
+          <br>John Lark
+        <br>Dummy Apartments<br>
+        276 Main Street <br>
+          Boulevard, LA-567892
+        </td>
+      </tr>
+      <tr>
+        <th>Name/Description</th>
+        <th>Qty.</th>
+        <th>MRP</th>
+        <th>Amount</th>
+      </tr>
+     <tr>
+      <td>Biryani</td>
+      <td style="text-align:center ;">3</td>
+      <td>400</td>
+      <td>1200</td>
+     </tr>
+     <tr>
+      <td>Chocolate Shake</td>
+      <td style="text-align:center ;">3</td>
+      <td>200</td>
+      <td>600</td>
+     </tr>
+     <tr>
+      <th colspan="3" style="text-align: left;">Subtotal:</th>
+      <td>1800</td>
+     </tr>
+     <tr>
+      <th colspan="2" style="text-align: left;">Tax</th>
+      <td>10%</td>
+      <td>180</td>
+     </tr>
+     <tr>
+      <th colspan="3" style="text-align: left;">Grand Total:</th>
+      <td>Rs 1620</td>
+     </tr>
+    </table>
+  </body>
+</html>

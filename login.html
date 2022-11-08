@@ -5,38 +5,193 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .button {
+        font-size: 18px;
+        padding: 10px 30px;
+        font-weight: 400;
+        border: 3px solid lawngreen;
+        cursor: pointer;
+        color: aquamarine;
+        align-self: center;
+        text-align: center;
+        background-color: black;
+        border-radius: 0.9rem;
+        margin: 10px;
+      }
+      .button:hover {
+        box-shadow: 10px 6px 7px -1px #ffffff;
+        transform: translateY(-15%);
+      }
+      #reg {
+        width: 300px;
+        background-color: aqua;
+        padding: 24px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .inp {
+        width: 100%;
+      }
+      .text {
+        display: flex;
+        place-content: center;
+        font-size: 5rem;
+        font-weight: 900;
+        letter-spacing: 0.2rem;
+      }
+      .text > div {
+        animation: bounce 0.5s ease-in-out alternate infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+      @keyframes bounce {
+        to {
+          transform: translateY(1rem);
+        }
+      }
+    </style>
   </head>
-  <body>
-    <h1>Login</h1>
-    <form>
+  <body style="margin: 0; background-color: lightblue">
+    <div class="text">
+      <div style="--i: 1">L</div>
+      <div style="--i: 2">O</div>
+      <div style="--i: 3">G</div>
+      <div style="--i: 4">I</div>
+      <div style="--i: 5">N</div>
+    </div>
+    <!--<img
+      align="right"
+      style="height: 660px; width: 1000px; margin-left: auto"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6n_CdA9DzdM3DceS6_4h7VffSULk1twEK1Q&usqp=CAU"
+    />-->
+    <!--The method Get is used for things which are not private. It is also unsuitable for sending large data.
+     The method post is used for large things and also private things-->
+    <form id="reg" method="get" action="./index.html">
       <div>
-        <label><b>Email</b></label>
-        <input type="email" required />
+        <label for="email"><b>Email</b></label
+        ><!--Autofocus focuses on an input when the page is loaded. Required makes sure a form or section of a form is filled before submitting-->
+        <input placeholder="Email" class="inp" type="email" name="email" autofocus id="email" required />
       </div>
       <hr />
       <div>
-        <label><b>Password</b></label>
-        <input type="Password" required />
+        <label><b>Password</b></label
+        >
+        <!--Maxlength means that only a certain number of characters or letters can be entered.
+        It is used below-->
+        <input placeholder="password" class="inp" type="password" name="password" maxlength="12" required />
       </div>
       <hr />
       <div>
         <label
           ><b>Confirm <span>Password</span></b></label
         >
-        <input type="Password" required />
+        <input placeholder="Confirm password" class="inp" type="Password" maxlength="12" name="confirm password" required />
       </div>
       <hr />
       <div>
-        <label><b>Age</b></label>
-        <input type="number" required />
+        <label><b>Age</b></label
+        ><br>
+        <input placeholder="Age" type="number" name="number" min="16" required />
       </div>
       <hr />
       <div>
-        <label><b>Date Of Birth</b></label>
-        <input type="date" required />
+        <label><b>Date Of Birth</b></label
+        >
+        <input class="inp" type="date" name="date" required />
       </div>
       <hr />
-      <button>Submit</button>
+      <div>
+        <label><b>Gender</b></label
+        ><br>
+        <input type="radio" name="male" value="male" id="male" /><label for="male">Male</label>
+        <input type="radio" name="female" value="female" id="female" /><label for="female">Female</label>
+        <input type="radio" name="other" value="other" id="other"/><label for="other">Other</label>
+      </div>
+      <hr />
+      <div>
+        <label>Press to choose security question</label><br />
+        <select name="Security Question" class="inp">
+          <option value="Birth-city">In what city were you born?</option>
+          <br />
+          <option value="name of favorite pet">
+            What is the name of your favorite pet?
+          </option>
+          <br />
+          <option value="mother maiden name">
+            What is your mother's maiden name?
+          </option>
+          <br />
+          <option value="school attended">
+            What high school did you attend?
+          </option>
+        </select>
+        <br />
+        <label><b>Answer</b></label
+        ><br />
+        <textarea
+          name="Answer"
+          id=""
+          cols="30"
+          rows="6"
+          class="inp"
+          value="Answer"
+          placeholder="Answer"
+        ></textarea>
+      </div>
+      <hr />
+      <br />
+      <div
+        style="margin-top: 0px; margin-bottom: 3px; padding: 0px; align: ttt"
+      >
+        <b style="margin-top: 0px">Choose your prefered language</b>
+        <!--Using datalist in forms-->
+        <input
+          style="margin-top: 0px; margin-bottom: 0px"
+          list="technologies"
+          name="technology"
+        />
+        <datalist id="technologies">
+          <option value="HTML"></option>
+          <option value="CSS"></option>
+          <option value="Javascript"></option>
+          <option value="Java"></option>
+          <option value="C++"></option>
+          <option value="Git"></option>
+          <option value="React"></option>
+          <option value="Redux"></option>
+          <option value="Angular"></option>
+          <option value="Python"></option>
+          <option value="PHP"></option>
+          <option value="Django"></option>
+        </datalist>
+      </div>
+      <hr />
+
+      <br />
+      <label for=""><b>Choose your desired start date</b></label>
+      <!--The min and max dates are written like this year-month-day-->
+      <input type="date" name="start date" min="2022-11-15" />
+      <br />
+      <hr />
+      <!--Below is the way to enable users to add a file from their pc. The multiple allows users to add more than one file-->
+      <b>Provide your shs certificate</b>
+      <input multiple type="file" name="shs certificate" />
+      <br />
+      <input
+        type="checkbox"
+        name="terms and conditions"
+        value="accept"
+        style="margin-top: 10px"
+      /><span style="padding: 3px"> I agree to the terms and condition</span>
+      <!--The 2 ways of creating a button are found below-->
+      <input type="submit" value="Submit" class="button" />
+      <!--<button
+        class="button"
+      >
+        Submit
+      </button>-->
+      <!--Below is how a reset button is made.It restores the form to its original state-->
+      <input type="reset" value="reset" class="button" />
     </form>
   </body>
 </html>

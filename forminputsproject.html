@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Forms - Input Types</title>
+    <style>
+      .input {
+        font-size: 18px;
+        padding: 26px 10px 12px;
+        border: 0px;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        margin-bottom: 36px;
+      }
+      .button {
+        background-color: blue;
+        color: white;
+        border: 0px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+      }
+      .social-icon{
+        width:50px;
+        height: 50px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #f2f6ff; margin: 0;padding: 16px;">
+    <form
+      style="
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 24px;
+        width:40%;
+        border: 1px solid #ccc;
+      "
+    >
+      <h1 style="text-align: center;font-size: 32px;padding-top: 56px;padding-bottom: 32px;">Register</h1>
+      <div style="background-color:#f2f6ff;padding-top:16px;padding-bottom:16px;margin-left: 0px;margin-right: 0px;">
+        <img class="social-icon"
+          src="data:image/png;base64,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"
+          alt=""
+        />
+        <img class="social-icon"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZF2luh1FKz7el4OV6Gy427eqKCAxsSEARw&usqp=CAU" alt="">
+        <img class="social-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2VSgqsQU3CeijIc0-yQy6pbrX-7ppxFgYiw&usqp=CAU" alt="">
+        <img class="social-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXSWzuhKEahq8p9hMuA0jz8oln4ePVxLip1Q&usqp=CAU" alt="">
+      </div>
+      <input class="input" type="text" name="username" placeholder="Username" />
+      <input class="input" type="email" name="Email" placeholder="Email" />
+      <br />
+      <input class="input" type="password" placeholder="*Password" />
+      <br />
+      <input
+        class="input"
+        type="password"
+        name="confirm password"
+        placeholder="Confirm Password"
+      />
+      
+      <div
+        style="
+          text-align: center;
+          align-self: center;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 16px;
+        "
+      >
+        <input type="submit" value="Register" class="button" />
+      </div>
+    </form>
+  </body>
+</html>
